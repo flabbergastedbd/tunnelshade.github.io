@@ -5,3 +5,4 @@ default-image: https://gravatar.com/avatar/fceda72bc3836ad605642dad24b50797?s=50
 markdown: redcarpet
 pygments: true
 url: http://blog.tunnelshade.in
+permalink: /:year/:month/:title.html
