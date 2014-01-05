@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS Styles -->
+        <link rel="stylesheet" href="/css/main.css">
+
+        <!-- Jquery required by bootstrap -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+        <!-- Latest compiled and minified Bootstrap JavaScript -->
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+
+        <div class="container">
+          <div class="row" style="margin-top: 20px;">
+              <div class="col-md-3">
+              </div>
+              <div class="col-md-1">
+                  <ul class="list-unstyled pull-right text-right">
+                    {% for weight in (1..site.pages.size) %}
+                      {% for _page in site.pages %}
+                        {% if _page.weight and _page.weight == weight %}
+                        <li>
+                        <a href="{{ _page.url }}" role="button" class="btn btn-xs btn-default">
+                        <span class="glyphicon glyphicon-{{ _page.glyphicon }}"></span> {{ _page.title }} <span class="glyphicon {% if _page.url == page.url %} glyphicon-circle-arrow-left {% endif %}"></span>
+                        </a>
+                        </li>
+                        {% endif %}
+                      {% endfor %}
+                    {% endfor %}
+                  </ul>
+              </div>
+              <div class="col-md-8">
+                  <a href="/">
+                      <img src="{{ site.logo }}" class="img-rounded img-responsive" alt="HACK UR L!FE"/>
+                  </a>
+              </div>
+          </div>
+          <div class="row" style="margin-top: 20px;">
+                  {{ content }}
+          </div>
+          <hr>
+          <div class="footer">
+              <div class="col-md-5">
+                  <blockquote class="pull-right">
+                    <p>Strive not to be a success, but rather to be of value.</p>
+                    <small>Albert Einstein</small>
+                   </blockquote>
+              </div>
+              <div class="col-md-3">
+                  <ul class="list-unstyled">
+                      <li><span class="glyphicon glyphicon-user"></span> <strong>Bharadwaj Machiraju</strong></li>
+                      <li><span class="glyphicon glyphicon-envelope"></span> bharadwaj.machiraju[]gmail[]com</li>
+                  </ul>
+              </div>
+               <div class="col-md-2">
+                  <ul class="list-unstyled">
+                      <li><span class="glyphicon glyphicon-star"></span> <a href="https://github.com/tunnelshade" target="_blank">Github</a></li>
+                  </ul>
+               </div>
+              <div class="col-md-2">
+                  <ul class="list-unstyled">
+                      <li><span class="glyphicon glyphicon-thumbs-up"></span> <a href="https://facebook.com/tunnelshade" target="_blank">Facebook</a></li>
+                      <li><span class="glyphicon glyphicon-retweet"></span> <a href="https://twitter.com/tunnelshade_" target="_blank">Twitter</a></li>
+                      <li><span class="glyphicon glyphicon-globe"></span> <a href="https://google.com/+BharadwajMachiraju" target="_blank">Google Plus</a></li>
+                      <li><span class="glyphicon glyphicon-link"></span> <a href="http://in.linkedin.com/pub/bharadwaj-machiraju/45/109/38/" target="_blank">LinkedIn</a></li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+
+    </body>
+</html>

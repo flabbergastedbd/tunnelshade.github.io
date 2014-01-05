@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="row dashed-border">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <h2><span class="glyphicon glyphicon-{{ page.glyphicon }}"></span> {{ page.title }} </h2>
+        <hr>
+        <p style="text-align: justify;">
+            {{ content }}
+        </p>
+        {% include social_buttons.html %}
+        <div class="row" style="margin-top:10px;">
+            {% include disqus.html %}
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>

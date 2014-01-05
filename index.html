@@ -1,0 +1,37 @@
+---
+layout: default
+title: Home
+weight: 1
+glyphicon: home
+---
+
+<!-- Nav tabs -->
+<ul class="nav nav-pills nav-justified">
+    {% for category in site.categories %}
+        <li><a href="#{{ category[0] }}" data-toggle="tab">{{ category[0] | capitalize }}</a></li>
+    {% endfor %}
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    {% for category in site.categories %}
+        <div class="tab-pane" id="{{ category[0] }}">
+            <hr>
+            {% for post in category[1] %}
+            {% capture remainder %}{{ forloop.index | modulo:2 }}{% endcapture %}
+                {% if remainder == '1' %}
+                    <div class="row">
+                {% endif %}
+
+                <div class="col-md-6">
+                    {% include post-excerpt.html post=post image='' stats='' summary='' %}
+                </div>
+
+                {% if remainder == '0' or forloop.last %}
+                    </div>
+                    <hr>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>

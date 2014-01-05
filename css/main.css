@@ -1,0 +1,21 @@
+.dashed-border
+{
+    border: 2px dashed #CCCCCC;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+.image-center
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img
+{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}

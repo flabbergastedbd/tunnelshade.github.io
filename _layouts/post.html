@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<div class="row dashed-border">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <h2>{{ page.title }}</h2>
+        <h3>
+            <small>
+                <span class="glyphicon glyphicon-calendar"></span> {{ page.date | date_to_string }}
+                <span class="glyphicon"></span> <!-- spacer -->
+                <span class="glyphicon glyphicon-folder-open"></span> Categories: 
+                {% for category in page.categories %}
+                    {{ category }}
+                {% endfor %}
+                <span class="glyphicon"></span> <!-- spacer -->
+                <span class="glyphicon glyphicon-tags"></span> Tags:
+                {% for tag in page.tags %}
+                    <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#{{ tag }}-modal">
+                        {{ tag }}
+                    </button>
+                {% endfor %}
+                {% for tag in page.tags %}
+                    <div class="modal fade" id="{{ tag }}-modal" tab-index="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Posts with tag: <button class="btn btn-primary btn-xs">{{ tag }}</button></h4>
+                                </div>
+                                <div class="modal-body">
+                                    {% for post in site.tags[tag] %}
+                                        {% include post-excerpt.html post=post %}
+                                        <hr>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </small>
+        </h3>
+
+        <div class="row">
+                {{ content }}
+        </div>
+        {% include social_buttons.html %}
+        <div class="row" style="margin-top:10px;">
+            {% include disqus.html %}
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>

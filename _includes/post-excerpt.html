@@ -1,0 +1,32 @@
+<div class="row">
+    {% if include.image %}
+        <div class="col-md-4">
+            <a href="{{ include.post.url }}">
+                <img src="{% if include.post.image %}{{ include.post.image }}{% else %}{{ site.default-image }}{% endif %}" class="img-responsive img-thumbnail"/>
+            </a>
+        </div>
+    <div class="col-md-8">
+    {% else %}
+    <div class="col-md-12">
+    {% endif %}
+        <h4>
+            <a href="{{ include.post.url }}">{{ include.post.title }}</a>
+        </h4>
+        {% if include.stats %}
+        <p class="small">
+            <span class="glyphicon glyphicon-calendar"></span> {{ include.post.date | date_to_string }}
+            <span class="glyphicon"></span> <!-- spacer -->
+            <span class="glyphicon glyphicon-tags"></span> Tags: 
+            {% for tag in include.post.tags %}
+                <span class="badge"> {{ tag }} </span>
+            {% endfor %}
+        </p>
+        {% endif %}
+
+        {% if include.summary %}
+        <p>
+            {{ include.post.content | strip_html | truncatewords: 35 }}...
+        </p>
+        {% endif %}
+    </div>
+</div>
