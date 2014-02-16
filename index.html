@@ -4,55 +4,17 @@ title: Home
 weight: 1
 glyphicon: home
 ---
+{% for post in site.posts limit:8 %}
+    {% capture remainder %}{{ forloop.index | modulo:2 }}{% endcapture %}
+    {% if remainder == '1' %}
+        <div class="row">
+    {% endif %}
 
-<!-- Nav tabs -->
-<ul class="nav nav-pills nav-justified">
-    <li class="active"><a href="#latest" data-toggle="tab">Latest</a></li>
-    {% for category in site.categories %}
-        <li><a href="#{{ category[0] }}" data-toggle="tab">{{ category[0] | capitalize }}</a></li>
-    {% endfor %}
-</ul>
-
-<!-- Tab panes -->
-<div class="tab-content">
-    <div class="tab-pane active" id="latest">
-        <hr>
-        {% for post in site.posts limit:4 %}
-            {% capture remainder %}{{ forloop.index | modulo:2 }}{% endcapture %}
-                {% if remainder == '1' %}
-                    <div class="row">
-                {% endif %}
-
-                <div class="col-md-6">
-                    {% include post-excerpt.html post=post stats='' summary='' %}
-                </div>
-
-                {% if remainder == '0' or forloop.last %}
-                    </div>
-                    <hr>
-                {% endif %}
-        {% endfor %}
+    <div class="col-md-6">
+        {% include post-excerpt.html post=post stats='' summary='' image='' %}
     </div>
-
-
-    {% for category in site.categories %}
-        <div class="tab-pane" id="{{ category[0] }}">
-            <hr>
-            {% for post in category[1] %}
-            {% capture remainder %}{{ forloop.index | modulo:2 }}{% endcapture %}
-                {% if remainder == '1' %}
-                    <div class="row">
-                {% endif %}
-
-                <div class="col-md-6">
-                    {% include post-excerpt.html post=post stats='' summary='' %}
-                </div>
-
-                {% if remainder == '0' or forloop.last %}
-                    </div>
-                    <hr>
-                {% endif %}
-            {% endfor %}
+    {% if remainder == '0' or forloop.last %}
         </div>
-    {% endfor %}
-</div>
+        </hr>
+    {% endif %}
+{% endfor %}

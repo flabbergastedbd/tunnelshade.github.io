@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About Me"
-weight: 3
+weight: 4
 glyphicon: user
 ---
 

@@ -11,32 +11,12 @@ layout: default
                 <span class="glyphicon"></span> <!-- spacer -->
                 <span class="glyphicon glyphicon-folder-open"></span> Categories: 
                 {% for category in page.categories %}
-                    {{ category }}
+                    <a class="label label-primary" href="/categories.html#{{ category | capitalize }}">{{ category | capitalize }}</a>
                 {% endfor %}
                 <span class="glyphicon"></span> <!-- spacer -->
                 <span class="glyphicon glyphicon-tags"></span> Tags:
                 {% for tag in page.tags %}
-                    <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#{{ tag }}-modal">
-                        {{ tag }}
-                    </button>
-                {% endfor %}
-                {% for tag in page.tags %}
-                    <div class="modal fade" id="{{ tag }}-modal" tab-index="-1">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title">Posts with tag: <button class="btn btn-primary btn-xs">{{ tag }}</button></h4>
-                                </div>
-                                <div class="modal-body">
-                                    {% for post in site.tags[tag] %}
-                                        {% include post-excerpt.html post=post %}
-                                        <hr>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <span class="label label-default">{{ tag }}</span>
                 {% endfor %}
             </small>
         </h3>

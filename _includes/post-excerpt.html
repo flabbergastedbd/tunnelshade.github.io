@@ -16,10 +16,11 @@
         <p class="small">
             <span class="glyphicon glyphicon-calendar"></span> {{ include.post.date | date_to_string }}
             <span class="glyphicon"></span> <!-- spacer -->
-            <span class="glyphicon glyphicon-tags"></span> Tags: 
-            {% for tag in include.post.tags %}
-                <span class="badge"> {{ tag }} </span>
+            <span class="glyphicon glyphicon-folder-open"></span> Category: 
+            {% for category in post.categories %}
+                <a class="label label-primary" href="/categories.html#{{ category | capitalize }}">{{ category | capitalize }}</a>
             {% endfor %}
+            <span class="glyphicon"></span> <!-- spacer -->
         </p>
         {% endif %}
 

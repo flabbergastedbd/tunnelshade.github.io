@@ -1,9 +1,9 @@
 .dashed-border
 {
     border: 2px dashed #CCCCCC;
-    border-radius: 7px;
-    -moz-border-radius: 7px;
-    -moz-border-radius: 7px;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -moz-border-radius: 100px;
 }
 
 .image-center
