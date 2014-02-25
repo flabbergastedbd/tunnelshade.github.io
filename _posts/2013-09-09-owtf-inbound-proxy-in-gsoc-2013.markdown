@@ -10,7 +10,7 @@ I always feel like my selection in GSoC 2013 was all magic because of the fact t
 completely unaware about the presence of infosec community in GSoC. I contacted
 [**Abraham Aranguren**](http://blog.7-a.org), the project leader for **OWASP Offensive Web Testing Framework**.
 He was very helpful throughout the gruelsome process of making a proposal. Thanks to him,
-the proposal turned out to be like [**this**](http://www.google-melange.com/gsoc/proposal/review/google/gsoc2013/tunnelshade/1).
+the proposal turned out to be like [**this**](http://www.google-melange.com/gsoc/proposal/review/google/gsoc2013/tunnelshade/5785905063264256).
 My proposal got selected and my mentor advised me to do some pre-implementation research
 so that I face less problems in the future.
 
