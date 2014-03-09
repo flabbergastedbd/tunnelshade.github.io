@@ -35,17 +35,17 @@ ______
 
 Last day, so I wanted to enjoy every bit of it. Met some new people again but realised the fact that networking is as important as attending
 talks. Clicked some cool pics :P. Surprisingly got some Job offers :P, which were reduced to internship offers when people came to know that I
-still a student. Had a great time at the venue :D
+am a student. Had a great time at the venue :D
 
 ______
 #### Aftermath
 
-One of my main goal was to popularize OWTF among the community & I can say that I could draw some attention towards it. Putting it all together,
+One of my main goal was to popularize OWTF among the community & I am sure that owtf got some good attention. Putting it all together,
 I learnt the following things from this experience:
 
 + Mark out important talks & make sure you attend them. Balance your networking and talks
 + Never hesitate to meet new people :D
-+ Share your research if possible so that others have a reason to share (I got to know lot of new ideas)
++ Share your research if possible so that others have a reason to share (I got to know a lot of new ideas)
 + Don't forget to ask for email addresses when necessary
 + Always be the cool dude xD
 
