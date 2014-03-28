@@ -2,7 +2,7 @@
     {% if include.image %}
         <div class="col-md-4">
             <a href="{{ include.post.url }}">
-                <img src="{% if include.post.image %}{{ include.post.image }}{% else %}{{ site.default-image }}{% endif %}" class="img-responsive img-thumbnail"/>
+                <img src="{% if include.post.image %}{{ include.post.image }}{% else %}{{ site.default-image }}{% endif %}" class="img-responsive img-thumbnail center-block"/>
             </a>
         </div>
     <div class="col-md-8">
