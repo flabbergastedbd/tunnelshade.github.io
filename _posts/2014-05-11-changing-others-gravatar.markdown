@@ -28,5 +28,6 @@ except the last one. So I shifted to using **Clickjacking** for the last stage :
 
 11 May, 2014 - Public disclosure
 
-**P.S** - Got some swag form Automattic for these reports. They don't have a
-bounty program :P
+**P.S** - Got some swag from Automattic for these reports. They don't have a
+bounty program, atleast they don't even have an email address to report vulns
+in Gravatar.
