@@ -145,7 +145,7 @@ so I need **gtk-engine-murrine**. Now, your gtk apps must be cool as in any othe
 
 + My **.vimrc** along with **molokai** colorscheme is present [here](https://github.com/tunnelshade/awesome-dots).
 + **WeeChat** configuration:
-	+ Install and enable autoload of some plugins (**beep.pl**, **buffers.pl** etc..).
+	+ Install and enable autoload of some plugins ( **beep.pl** , **buffers.pl** etc..).
 	+ Make sure, your terminal emulator responds to urgent bell. In terminator, set **Terminal bell** to **Window List Flash**. To simulate bell
 
 		```bash
