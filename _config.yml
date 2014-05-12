@@ -3,6 +3,8 @@ caption: and then patch it!
 logo: /images/logo.png
 default-image: https://gravatar.com/avatar/fceda72bc3836ad605642dad24b50797?s=500
 markdown: redcarpet
-highlighter: true
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+highlighter: pygments
 url: http://blog.tunnelshade.in
 permalink: /:year/:month/:title.html
