@@ -47,4 +47,5 @@ Off all the above, I used the third one to write some file of the theme and I go
 **Even though wordpress doesn't allow editors to write php directly, we can do it in an indirect manner**
 
 I thought this was a bug and reported this information to wordpress guys & they closed the issue as **Won't Fix**,
-which is a good news for us, since **editor** accounts are bit easy to obtain :P
+which is a good news for us, since **editor** accounts are bit easy to obtain :P. I think some level of mitigation for
+this can be obtained if wordpress prompts the admin for password for sensitive actions like the above mentioned
