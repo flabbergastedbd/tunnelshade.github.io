@@ -3,49 +3,71 @@ layout: post
 title: "Wordpress [Bugs/Hacks/Tweaks/Tricks]? I am not sure"
 categories: Hacks
 tags: tricks hacks
-image: https://s.w.org/about/images/fanart/logo_500x500.png
+image: http://www.zee-way.com/templates/default/images/wordpress-logo.png
 ---
 
-The following is a writeup of a penetration test which will serve me as a remainder :P. I was up against a wordpress
+The following is writeup of how I dealt with a specific circumstance. I was up against a wordpress
 installation in one of my tests and luckily I already had **editor** level credentials. So I have to somehow obtain a
-shell. Remember that editor's do not have the ability to edit/add themes/plugins.
+shell. Remember that editor's do not have the ability to **edit/add themes/plugins**. So, aim was to run php using my
+editor privileges.
 
-Observing the facts :
-+ I can add html in the site (i.e unfiltered_html capability for editors).
-+ Nothing more valuable than the above point.
+**Solid Facts :**
 
-Methods which will not work :
++ I can add html in the site using _editor privileges_ (i.e unfiltered_html capability for editors).
++ Nothing more valuable than the above point. (Later found some interesting places in dashboard where payloads work).
+
+**Methods which won't work :**
+
 + Cannot steal cookies of administrator, since **httponly** flag is set on cookies.
-+ No dumb popups asking for password because that might create suspicion.
++ No dumb popups asking for password because that might create suspicion, we ain't dealing with skiddies.
++ Solid patched wordpress with up-to-date plugins.
 
-I was unable to find anything on google. So I started poking around a **local wordpress installation** to find ways to
-run php i.e escalate privileges and I came across multiple ways to do this. By using some js-fu we can do the
-following things and get admin privileges
+**Methods which will :**
 
-+ Resetting **admin** password. Enter the following snippet anywhere in the site to reset admin password.
++ Resetting **admin** password. I wrote a sample POC which when run resets admin password to **t3st**.
 
-```[javascript]
-var siteUrl = 'http://wordpress.org' // Wordpress site url
+    {% highlight javascript linenos %}
+    var siteUrl = 'http://wordpress.org' // Wordpress site url
 
-$(document).ready(function() {
-	$.get(siteUrl+"/wp-admin/profile.php?wp_http_referer=%2Fwp-admin%2Fusers.php", function(data) {
-		var html = $(data);
-		var form = html.find('form');
-		form.find('#pass1')[0].value = 't3st'; // New password
-		form.find('#pass2')[0].value = 't3st'; // Confirm password
-		form.find('#submit')[0].click();
-		});
-	});
-```
+    $(document).ready(function() {
+        $.get(siteUrl+"/wp-admin/profile.php?wp_http_referer=%2Fwp-admin%2Fusers.php", function(data) {
+            var html = $(data);
+            var form = html.find('form');
+            form.find('#pass1')[0].value = 't3st'; // New password
+            form.find('#pass2')[0].value = 't3st'; // Confirm password
+            form.find('#submit')[0].click();
+            });
+        });
+    {% endhighlight %}
 
-+ User roles can be changed by admin in the interface, so the editor account can be made admin using that feature.
++ User roles can be changed by admin in the interface, so again with some **js-fu** we can generate these requests to escalate our editor account to admin.
 + Admin can write php directly to themes and plugins, so something like [this](https://nealpoole.com/blog/2011/01/how-does-cross-site-scripting-become-arbitrary-code-execution-an-ode-to-the-oft-maligned-referer-header/) can be done.
 + Email address of the admin can also be changed instead of password, then password reset and boom.
 
-Off all the above, I used the third one to write some file of the theme and I got a sweet **shell**. So the crisp of the writeup is
+Off all the above, I used the third one to write some file of the theme and I got a sweet **shell**. So the crisp till now is
 
 **Even though wordpress doesn't allow editors to write php directly, we can do it in an indirect manner**
 
-I thought this was a bug and reported this information to wordpress guys & they closed the issue as **Won't Fix**,
-which is a good news for us, since **editor** accounts are bit easy to obtain :P. I think some level of mitigation for
-this can be obtained if wordpress prompts the admin for password for sensitive actions like the above mentioned
+Hold on folks, I know what you are thinking, for the above attacks to work, _a loggedin admin_ has to visit an infected post/page. I will say
+not required. **WHY?**
+
++ A JS-payload entered in the title of a new post/page (by using editor obviously) gets executed right in the homepage of dashboard. **WTF? WHERE?**
+
+    ```
+    Recently Published section in the dashboard shows the latest posts/pages, so payloads get executed there
+    ```
+
++ Paylaod also gets executed in **Revisions** of that particular post/page.
++ Obviously the original page/post.
+
+And in a flash I remembered two statements :
+
++ Privilege escalation
++ [Content is never displayed unfiltered in the admin](http://make.wordpress.org/core/handbook/reporting-security-vulnerabilities/#why-are-some-users-allowed-to-post-unfiltered-html)
+
+Reported these to wordpress and they proved that I am **dumb**. The bugs were classified as :
+
++ Won't Fix
++ N.A
+
+May be they are right, but then why different accounts for *admin* and *editor* when both can do same set of tasks ;)
