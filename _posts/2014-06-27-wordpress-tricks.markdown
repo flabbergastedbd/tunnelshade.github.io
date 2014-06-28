@@ -11,22 +11,22 @@ installation in one of my tests and luckily I already had **editor** level crede
 shell. Remember that editor's do not have the ability to **edit/add themes/plugins**. So, aim was to run php using my
 editor privileges.
 
-**Solid Facts :**
+#### Solid Facts :
 
 + I can add html in the site using _editor privileges_ (i.e unfiltered_html capability for editors).
 + Nothing more valuable than the above point. (Later found some interesting places in dashboard where payloads work).
 
-**Methods which won't work :**
+#### Methods which won't work :
 
 + Cannot steal cookies of administrator, since **httponly** flag is set on cookies.
 + No dumb popups asking for password because that might create suspicion, we ain't dealing with skiddies.
 + Solid patched wordpress with up-to-date plugins.
 
-**Methods which will :**
+#### Methods which will :
 
-+ Resetting **admin** password. I wrote a sample POC which when run resets admin password to **t3st**.
+1. Resetting **admin** password. I wrote a sample POC which when run resets admin password to **t3st**.
 
-    {% highlight javascript linenos %}
+    ```
     var siteUrl = 'http://wordpress.org' // Wordpress site url
 
     $(document).ready(function() {
@@ -38,18 +38,19 @@ editor privileges.
             form.find('#submit')[0].click();
             });
         });
-    {% endhighlight %}
+    ```
 
-+ User roles can be changed by admin in the interface, so again with some **js-fu** we can generate these requests to escalate our editor account to admin.
-+ Admin can write php directly to themes and plugins, so something like [this](https://nealpoole.com/blog/2011/01/how-does-cross-site-scripting-become-arbitrary-code-execution-an-ode-to-the-oft-maligned-referer-header/) can be done.
-+ Email address of the admin can also be changed instead of password, then password reset and boom.
+2. User roles can be changed by admin in the interface, so again with some **js-fu** we can generate these requests to escalate our editor account to admin.
+3. Admin can write php directly to themes and plugins, so something like [this](https://nealpoole.com/blog/2011/01/how-does-cross-site-scripting-become-arbitrary-code-execution-an-ode-to-the-oft-maligned-referer-header/) can be done.
+4. Email address of the admin can also be changed instead of password, then password reset and boom.
 
-Off all the above, I used the third one to write some file of the theme and I got a sweet **shell**. So the crisp till now is
-
-**Even though wordpress doesn't allow editors to write php directly, we can do it in an indirect manner**
+Since I am lazy, I just created POC for the first one. Off all the above, I used the third one to write some file of the theme and I popped a hard **shell**.
+So the crisp till now is **Even though wordpress doesn't allow editors to write php directly, we can do it in an indirect manner**
 
 Hold on folks, I know what you are thinking, for the above attacks to work, _a loggedin admin_ has to visit an infected post/page. I will say
 not required. **WHY?**
+
+#### Added advantages :
 
 + A JS-payload entered in the title of a new post/page (by using editor obviously) gets executed right in the homepage of dashboard. **WTF? WHERE?**
 
@@ -60,7 +61,7 @@ not required. **WHY?**
 + Paylaod also gets executed in **Revisions** of that particular post/page.
 + Obviously the original page/post.
 
-And in a flash I remembered two statements :
+#### And in a flash I remembered two statements :
 
 + Privilege escalation
 + [Content is never displayed unfiltered in the admin](http://make.wordpress.org/core/handbook/reporting-security-vulnerabilities/#why-are-some-users-allowed-to-post-unfiltered-html)
