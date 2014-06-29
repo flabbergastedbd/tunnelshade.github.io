@@ -66,7 +66,7 @@ not required. **WHY?**
 + Privilege escalation
 + [Content is never displayed unfiltered in the admin](http://make.wordpress.org/core/handbook/reporting-security-vulnerabilities/#why-are-some-users-allowed-to-post-unfiltered-html)
 
-Reported these to wordpress and they proved that I am **dumb**. The bugs were classified as :
+Reported these to wordpress and they classified these bugs as :
 
 + Won't Fix
 + N.A
