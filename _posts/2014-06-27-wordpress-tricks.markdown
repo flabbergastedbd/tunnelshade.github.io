@@ -58,7 +58,7 @@ not required. **WHY?**
     Recently Published section in the dashboard shows the latest posts/pages, so payloads get executed there
     ```
 
-+ Paylaod also gets executed in **Revisions** of that particular post/page.
++ Payload also gets executed in **Revisions** of that particular post/page.
 + Obviously the original page/post.
 
 #### And in a flash I remembered two statements :
