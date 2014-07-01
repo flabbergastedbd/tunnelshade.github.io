@@ -1,17 +1,26 @@
 ---
 layout: page
 title: "About Me"
-weight: 4
+weight: 3
 glyphicon: user
 ---
 
 **Hello,**
 
-Check out the footer dude, all the details are present there :P
+##### I am a
 
-Listed in
++ senior at **Indian Institute of Technology (BHU), Varanasi** in _Electronics Engg._
++ 20 year old sample of 30k year old species of planet earth
++ security tool developer
++ restless soul
++ bug hunter rarely
 
-- [Google Web Application Security Hall of Fame](http://www.google.com/about/appsecurity/hall-of-fame/reward/)
-- [RedHat Security Hall of Fame](https://access.redhat.com/site/articles/66234)
+##### People know me as (based on popularity)
 
-**Bharadwaj Machiraju a.k.a tunnelshade :)**
++ tunnelshade
++ bd
++ Bharadwaj Machiraju
+
+##### Contact/Hire
+
++ Everything is in the footer
