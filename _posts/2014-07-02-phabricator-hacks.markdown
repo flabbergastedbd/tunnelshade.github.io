@@ -3,7 +3,7 @@ layout: post
 title: "Phacilitating phew bugs ;)"
 categories: Hacks
 tags: tricks hacks
-image: http://phacility.com/rsrc/image/phacility/phacility_logo.jpg
+image: http://phacility.com/rsrc/images/phacility_dark_logo.png
 ---
 
 I am not a huge fan of bug bounties since I am more of a tool developer. But as the title suggests, to keep myself
