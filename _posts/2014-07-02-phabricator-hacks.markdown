@@ -20,7 +20,7 @@ fresh & bounties from [**IBB**](https://hackerone.com/ibb) are special. So enter
 
 + https://hackerone.com/reports/16315
 + https://hackerone.com/reports/16392
-+ https://hackerone.com/reports/18691 (*Not yet public at the time of writing)
++ https://hackerone.com/reports/18691 (~~Not yet public at the time of writing~~)
 
 ##### What to grasp :
 
