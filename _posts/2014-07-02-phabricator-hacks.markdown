@@ -3,7 +3,7 @@ layout: post
 title: "Phacilitating phew bugs ;)"
 categories: Hacks
 tags: tricks hacks
-image: http://phacility.com/rsrc/image/phacility/phacility_logo.jpg
+image: http://phacility.com/rsrc/images/phacility_dark_logo.png
 ---
 
 I am not a huge fan of bug bounties since I am more of a tool developer. But as the title suggests, to keep myself
@@ -20,7 +20,7 @@ fresh & bounties from [**IBB**](https://hackerone.com/ibb) are special. So enter
 
 + https://hackerone.com/reports/16315
 + https://hackerone.com/reports/16392
-+ https://hackerone.com/reports/18691 (*Not yet public at the time of writing)
++ https://hackerone.com/reports/18691
 
 ##### What to grasp :
 
