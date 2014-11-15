@@ -101,7 +101,7 @@ screenshots of search queries that are extracted from some online hubs :P are pr
 <img src="http://i.imgur.com/kPNCDQY.png" class="image-center" style="height:500px" alt="IRC Screen"/>
 
 Instead of the ip addresses we can easily track the searches using registered nicks on the hub. All the TTH searches are the files
-that are being downloaded by users.
+that are being downloaded by users. Some [searches](http://pastebin.com/Xpr5HYfd) on my university hubs xD
 
 #### Spreading malware (Spoofing search results)
 
