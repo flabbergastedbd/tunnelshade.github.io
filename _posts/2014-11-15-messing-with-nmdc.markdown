@@ -71,6 +71,46 @@ Some clients on which I tested this are
 + DC++ (<=0.843)
 + I am sure there will be many more...
 
+### Hub Side Hacks
+
+_______________________
+
+#### Vulnerable Lua Scripts (From SQLi to RCE)
+
+Like every other place, insecure extensions bring in more vulnerabilities. Most of the hub softwares make available **a lua scripting
+engine** to make things more extensible. There are tons of lua scripts already present on the internet whose functionality vary from
+chat logging to anagrams. Check [here](http://script-bot.dcstuff.nl/index.php?dir=) for some sample scripts. So, how can you exploit
+these?? Check [this](https://github.com/hjpotter92/ptokax-scripts/blob/4173050f3d35f11b90c0c21bcdd6d96d5459e3fb/external/stats/toks.lua#L60)!
+There are scripts which use SQL databases, some chat loggers write directly to a log file with certain naming etc... So if you are
+lucky enough to find a script which uses unescaped user data in its db queries, you might actually end up having a SQLi right there.
+One way to go is to make yourself Admin or elevate it to RCE if possible. How to detect it? Generally to keep things simple for the
+normal users, hubs send command of the following format which clients tend to display as hub options for a user. The user command looks
+like [this](http://nmdc.sourceforge.net/NMDC.html#_usercommand)
+
+```
+$UserCommand 2 6 Kick$$To: %[nick] From: %[mynick] $<%[mynick]> You are being kicked====|$Kick %[nick]|| $UserCommand 255 1|
+```
+
+So, dig around nicely for such instructions and you might get lucky finding some lua scripts which provide some extra functionality.
+Try fingerprinting the script, search on internet, do a source code review & BOOM!! <-- All this if you are lucky :P
+
+Sample UserCommands grabbed from a hub. There is lot of information leak which will tell you which script it is ;)
+
+```
+UserCommand 1 3 LJ palace\.:: Ranks\Live user location statistics by country $<%[mynick]> +cclive&#124;
+UserCommand 1 3 LJ palace\.:: Ranks\Live user location statistics by city $<%[mynick]> +citylive %[line:<cc>]&#124;
+UserCommand 1 3 LJ palace\.:: Ranks\All time user location statistics $<%[mynick]> +cchist&#124;
+UserCommand 1 3 LJ palace\.:: Hub news\Read hub news $<%[mynick]> +hubnews %[line:<lines>]&#124;
+UserCommand 1 3 LJ palace\.:: Releases\List of available releases $<%[mynick]> +rellist %[line:<type>] %[line:<lines>] %[line:<category or publisher>]&#124;
+UserCommand 1 3 LJ palace\.:: Releases\Find release by name or category $<%[mynick]> +relfind %[line:<name>]&#124;
+UserCommand 1 3 LJ palace\.:: Chat history\Main chat history $<%[mynick]> +history %[line:<lines>]&#124;
+UserCommand 1 3 LJ palace\.:: Chat history\Your main chat history $<%[mynick]> +myhistory %[line:<lines>]&#124;
+UserCommand 1 3 LJ palace\.:: Custom nicks\Get users real nick $<%[mynick]> +realnick %[line:<nick>]&#124;
+UserCommand 1 3 LJ palace\.:: Custom nicks\Custom nick list $<%[mynick]> +custlist&#124;
+UserCommand 1 3 LJ palace\.:: Hublist\Show friendly hubs $<%[mynick]> +showhubs&#124;
+UserCommand 1 3 LJ palace\.:: Other\Calculate an equation $<%[mynick]> +calculate %[line:<equation>]&#124;
+```
+
 ### Protocol Side Hacks
 
 _______________________
