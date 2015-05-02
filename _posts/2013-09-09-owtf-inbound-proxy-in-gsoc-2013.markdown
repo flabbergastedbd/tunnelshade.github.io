@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google Summer of Code 2013 with OWASP OWTF"
-categories: programming
+categories: Python
 tags: tools owtf
 image: http://danielpocock.com/sites/danielpocock.com/files/GSoC-2013-plus.png
 ---
@@ -15,7 +15,7 @@ My proposal got selected and my mentor advised me to do some pre-implementation 
 so that I face less problems in the future.
 
 My pre-implementaion research is present [**here**](https://docs.google.com/document/d/1_iaOYaiSya83uxiecYhCJYBwQPubCWs463DJebNOqcQ/).
-So based on the results I started implementing my GSoC project. After implementation, I did 
+So based on the results I started implementing my GSoC project. After implementation, I did
 some benchmarks which are available [**here**](https://docs.google.com/document/d/1TdV667Uh3Fq272Wl8upzWi3c45-8E1tTVLcYPmc6yPM/)
 
 Finally, I successfully completed my GSoC 2013 project. Some points to keep in mind :
@@ -28,3 +28,4 @@ Finally, I successfully completed my GSoC 2013 project. Some points to keep in m
 
 **NOTE: GSoC 2013 has been a boon for me as I met people whom I would have missed probably.
 GSoC will give you a great open-source project to contribute**
+

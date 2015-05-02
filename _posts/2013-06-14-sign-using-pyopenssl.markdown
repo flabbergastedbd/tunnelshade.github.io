@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Signing an SSL cert using PyOpenSSL"
-categories: programming
+categories: Python
 tags: tricks python
 ---
 
