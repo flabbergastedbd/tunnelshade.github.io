@@ -2,7 +2,7 @@ name: H4CK UR LIFE
 caption: and then patch it!
 logo: /images/logo.png
 default-image: https://gravatar.com/avatar/fceda72bc3836ad605642dad24b50797?s=500
-highlighter: rogue
+highlighter: rouge
 markdown: kramdown
 kramdown:
   input: GFM
