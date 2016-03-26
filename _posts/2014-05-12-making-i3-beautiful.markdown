@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Configuring i3 for my setup"
-categories: Linux
+categories: linux
 tags: tricks info
 image: https://raw.githubusercontent.com/tunnelshade/awesome-dots/44c51685ac446ffdd2f6ec87252ed1c4be652026/screenshots/dirty2.png
 ---
@@ -101,7 +101,7 @@ absolutely no dependencies! Use it set your GTK, Icon & Cursor theme. GTK themes
 generated **~/.config/gtk-3.0/settings.ini** looked like this
 
 	```
-	[Settings] 
+	[Settings]
 	gtk-theme-name=Zukitwo
 	gtk-icon-theme-name=Faenza-Dark
 	gtk-font-name=Ubuntu 10

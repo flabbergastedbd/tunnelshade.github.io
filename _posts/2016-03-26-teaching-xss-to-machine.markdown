@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Teaching XSS to a machine"
-categories: Hacks
+categories: Machine-Learning
 tags: hacks
 image: "https://web.stanford.edu/group/pdplab/pdphandbook/suttonbarto_rl.png"
 ---

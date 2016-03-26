@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My first BruCON (2014)"
-categories: Information
+categories: information
 tags: info
 image: http://2014.brucon.org/images/3/3c/Brucon-2014-SMALL.jpg
 ---

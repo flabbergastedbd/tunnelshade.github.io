@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RPi 2 as my music server"
-categories: Linux
+categories: linux
 tags: tools
 image: https://www.raspberrypi.org/wp-content/uploads/2015/02/Pi_2_Model_B.png
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "XSS in Google 500 Error page"
-categories: hacks
+categories: Hacks
 tags: hacks info
 image: https://www.google.com/images/srpr/logo11w.png
 ---

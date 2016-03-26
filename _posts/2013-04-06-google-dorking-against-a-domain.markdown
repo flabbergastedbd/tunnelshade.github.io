@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "thedumpster := Targeted Google dorking"
-categories: hacks
+categories: Hacks
 tags: tools screenshots
 ---
 
@@ -20,7 +20,7 @@ sudo pip install pyquery
 
 ####Configuration
 
-- First the proxies must be configured in the config file correctly. 
+- First the proxies must be configured in the config file correctly.
 Pick some open proxies which use basic http auth or no auth at all. The **username:password** part must be omitted if not required. Make sure you use only one proxy on one line.
 
 {% highlight bash %}
@@ -44,18 +44,18 @@ usage: thedumpster.py [-h] [-l LIMIT] [-ghdb] [-ap] [-p] [-a ADD] [-r REM] [-ws]
 - **-l** : The value provided here will be limit for the number of results that will be returned for your search.
 - **-ghdb** : This flag when sets prompts you to select a type of dork from GHDB dorks, which will be tested against the domain.
 - **-ap** : This flag when set asks for the possbile backend of the
- web infrastructure. Then based on the backend it picks appropriate 
+ web infrastructure. Then based on the backend it picks appropriate
 dorks for searching.
-- **-p** : This flag allows to search for any pastebin dumps. 
+- **-p** : This flag allows to search for any pastebin dumps.
 - **-a** : This argument allows you to add custom search keywords. Multiple search words must be separated by comma. Eg :- **intext:error,ext:sql**
-- **-r** : This argument allows you to exclude search results of a 
-site. Multiple domain exclusion can be done by separating those domains 
+- **-r** : This argument allows you to exclude search results of a
+site. Multiple domain exclusion can be done by separating those domains
 with a comma. Eg:- **foo.bar.com,shut.bar.com**
 - **-ws** : The most important flag of all. This flag allows you to
- do google search which is against Google's TOS. So author is not 
+ do google search which is against Google's TOS. So author is not
 responsible for your usage.
-- **domain** : This is a compulsory positional argument. Better to 
-provide the root domain so that all subdomains are included in search 
+- **domain** : This is a compulsory positional argument. Better to
+provide the root domain so that all subdomains are included in search
 results.
 
 For example if we wish to search a site **example.com** , for **admin panels** while excluding sites **foo.example.com**, and extra query **intext:login** then you can use something like this
