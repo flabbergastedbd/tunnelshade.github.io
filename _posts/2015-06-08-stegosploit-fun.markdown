@@ -84,3 +84,31 @@ For anyone who read those slides all this would seem normal & yes it is!!
 #### Sample Polyglot with alert() payload
 
 ![Innocent cat becomes evil](http://i.imgur.com/tiEFZbc.png)
+
+#### Serving the Polyglot
+
+The image has to be served with a **text/html** content type. If not, the browser parser will
+ignore the html part and just render the image. Below is a sample python script which when run in the
+same directory as of the image, will serve the png with html content type.
+
+```python
+#!/usr/bin/python
+
+import SimpleHTTPServer
+import SocketServer
+
+PORT = 8000
+
+Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
+Handler.extensions_map.update({
+    '.png': 'text/html',
+});
+
+httpd = SocketServer.TCPServer(("", PORT), Handler)
+
+try:
+    print "Serving at http://127.0.0.1:%d" % (PORT)
+    httpd.serve_forever()
+except KeyboardInterrupt:
+    httpd.socket.close()
+```
