@@ -160,6 +160,6 @@ http://vk.com/swf/photo_uploader_lite.swf?h=h?&onMouseOver=eval(window.location.
 
 A different payload is in the image
 
-![vk.com Flash XSS](http://i.imgur.com/wBhOE51.png?1)
+![vk.com Flash XSS](https://i.imgur.com/wBhOE51.png?1)
 
 **HackerOne Report is present [here](https://hackerone.com/reports/66121)** (Not public at the time of writing)
