@@ -3,7 +3,7 @@ layout: post
 title: "Facebook games are fun .... to hack!"
 categories: Hacks
 tags: tricks hacks
-image: http://i43.tinypic.com/2wggoht.jpg
+image: https://i43.tinypic.com/2wggoht.jpg
 ---
 
 This is about how I learnt about logos with the help of a facebook game named **The Logo Game**.
@@ -13,8 +13,8 @@ consuming stuff :P. Eventually I stumbled upon Facebook games in particular a ga
 <img src="http://i43.tinypic.com/2wggoht.jpg" class="image-center" alt="Logo Game"/>
 
 The game was really cool (at the beginning). But the awkward thing that I noticed is that,
-if a correct guess was provided it was taking time to respond & for a wrong guess the 
-reaction was instantaneous. So, it is reasonable to open tamper data and check for the 
+if a correct guess was provided it was taking time to respond & for a wrong guess the
+reaction was instantaneous. So, it is reasonable to open tamper data and check for the
 data submits. For a correct solution there was a request being done and for wrong as
 expected no request was taking place. So I started diving into the source code :). What
 caught my attention was ==>
@@ -38,7 +38,7 @@ I just underlined few of the data because almost all the data is important. We h
 
 <img src="http://i43.tinypic.com/51t4du.jpg" class="image-center" alt="Check Function"/>
 
-Just a snapshot of a part of the output file. So now I have all the logo names in order. The file is available for download [here](http://www.mediafire.com/view/?wygcjzqi8auyopx). Finally there are loads of ways to learn stuff. So I started learning about logos this way. 
+Just a snapshot of a part of the output file. So now I have all the logo names in order. The file is available for download [here](http://www.mediafire.com/view/?wygcjzqi8auyopx). Finally there are loads of ways to learn stuff. So I started learning about logos this way.
 
 P.S - The score that I have in the game is legible and is not obtained through any unfair means :P
 

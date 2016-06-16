@@ -3,7 +3,7 @@ layout: post
 title: "Interesting flash xss on vk.com"
 categories: Hacks
 tags: hacks
-image: http://i.imgur.com/wBhOE51.png?1
+image: https://i.imgur.com/wBhOE51.png?1
 ---
 
 ### Introduction

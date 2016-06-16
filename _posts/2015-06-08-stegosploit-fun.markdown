@@ -3,7 +3,7 @@ layout: post
 title: "Stegosploit is simple fun!!"
 categories: Python
 tags: tools
-image: http://i.imgur.com/tiEFZbc.png
+image: https://i.imgur.com/tiEFZbc.png
 ---
 
 #### Backdrop

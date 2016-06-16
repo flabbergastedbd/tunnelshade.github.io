@@ -3,7 +3,7 @@ layout: post
 title: "Skipfish through a proxy"
 categories: Hacks
 tags: tricks tools
-image: http://skipfish.googlecode.com/svn/trunk/assets/sf_name.png
+image: https://skipfish.googlecode.com/svn/trunk/assets/sf_name.png
 ---
 
 My recent use of skipfish for benchmarking some proxies left me

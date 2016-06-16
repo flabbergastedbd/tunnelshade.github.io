@@ -3,15 +3,15 @@ layout: post
 title: "Way to fuzz (I learnt it this way :P)"
 categories: information
 tags: tricks info
-image: http://peachfuzzer.com/images/peach_fuzzer.png
+image: https://pbs.twimg.com/profile_images/435942283121156096/Y_5kUTkm.png
 ---
 
-I had a hard time learning how to fuzz desktop applications and few web 
-server softwares, because I cannot use google effectively. So I decided 
-to compile a list for myself.  
-  
+I had a hard time learning how to fuzz desktop applications and few web
+server softwares, because I cannot use google effectively. So I decided
+to compile a list for myself.
 
-Read this [book](http://www.amazon.com/gp/product/0321446119) if possible, it is super awesome :D  
+
+Read this [book](http://www.amazon.com/gp/product/0321446119) if possible, it is super awesome :D
 
 - Best win32 exploit development tutorials - [corelan](https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/)
  ( Because there is no fun in fuzzing when you don't know how to develop

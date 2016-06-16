@@ -3,7 +3,7 @@ layout: post
 title: "Flashriot - Using Flashbang for bulk analysis"
 categories: Hacks
 tags: tools
-image: http://rootslabs.net/blog/wp-content/uploads/2013/09/phantomjs_logo.png
+image: https://pbs.twimg.com/profile_images/1884362265/phantomjs_400x400.png
 ---
 
 I recently had the necessity to test multiple flash files for XSS. [Flashbang](https://cure53.de/flashbang)

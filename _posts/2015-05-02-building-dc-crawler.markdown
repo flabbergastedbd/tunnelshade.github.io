@@ -3,7 +3,7 @@ layout: post
 title: "Crawler for NMDC networks"
 categories: Python
 tags: tools python
-image: http://www.kazemjahanbakhsh.com/figs/crawler.jpg
+image: https://image.freepik.com/free-icon/web-crawler_318-64475.jpg
 ---
 
 #### Crawler
