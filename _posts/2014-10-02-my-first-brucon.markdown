@@ -3,7 +3,7 @@ layout: post
 title: "My first BruCON (2014)"
 categories: information
 tags: info
-image: http://2014.brucon.org/images/3/3c/Brucon-2014-SMALL.jpg
+image: https://blog.rootshell.be/wp-content/uploads/2009/06/Brucon-logo-small.jpg
 ---
 
 **It couldn't have been any better for me**. If you haven't been to BruCON, I suggest you to hurry up. As one of the attendees
