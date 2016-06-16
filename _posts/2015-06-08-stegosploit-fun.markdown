@@ -52,11 +52,11 @@ For anyone who read those slides all this would seem normal & yes it is!!
 + Common users are aware of malicious websites but not malicious images yet ;)
 + As an end user, what difference do you see?
 
-![Innocent cat](http://i.imgur.com/PCktIck.jpg)
+![Innocent cat](https://i.imgur.com/PCktIck.jpg)
 
 + Look again :P
 
-![Innocent cat becomes evil](http://i.imgur.com/TcjV8yu.jpg)
+![Innocent cat becomes evil](https://i.imgur.com/TcjV8yu.jpg)
 
 #### Difficulties
 
@@ -83,7 +83,7 @@ For anyone who read those slides all this would seem normal & yes it is!!
 
 #### Sample Polyglot with alert() payload
 
-![Innocent cat becomes evil](http://i.imgur.com/tiEFZbc.png)
+![Innocent cat becomes evil](https://i.imgur.com/tiEFZbc.png)
 
 #### Serving the Polyglot
 
