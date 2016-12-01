@@ -19,3 +19,8 @@ img
     height: auto;
     max-width: 100%;
 }
+
+p
+{
+  text-align: justify;
+}
