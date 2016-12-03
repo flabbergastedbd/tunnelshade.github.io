@@ -3,7 +3,7 @@ layout: post
 title: "Pocuito - A little web extension"
 categories: Tools
 tags: extension
-image: "https://cdn.rawgit.com/tunnelshade/pocuito/master/images/icons/icon128.png"
+image: "https://cdn.rawgit.com/tunnelshade/pocuito/master/extension/images/icons/icon128.png"
 ---
 <br>
 
