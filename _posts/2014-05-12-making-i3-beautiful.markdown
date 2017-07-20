@@ -6,6 +6,8 @@ tags: tricks info
 image: https://raw.githubusercontent.com/tunnelshade/awesome-dots/44c51685ac446ffdd2f6ec87252ed1c4be652026/screenshots/dirty2.png
 ---
 
+**I later moved to bspwm, maybe you might want to look at that as well --> [bspwm]({% post_url 2017-07-20-configuring-bspwm %})**
+
 Well, in this article, I will follow step by step procedure of setting up i3. My [dotfiles](http://github.com/tunnelshade/awesome-dots)
 
 + First of all, install i3, i3lock & i3status. Generally, installing i3 will pull these as dependencies.

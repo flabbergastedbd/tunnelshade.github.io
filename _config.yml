@@ -8,7 +8,7 @@ kramdown:
   input: GFM
   auto_ids: true
   syntax_highlighter: rouge
-gems: [jekyll-gist]
+plugins: [jekyll-gist]
 url: http://blog.tunnelshade.in
 permalink: /:year/:month/:title.html
 feeds: /atom.xml

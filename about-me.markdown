@@ -9,9 +9,7 @@ glyphicon: user
 
 ##### I am a
 
-+ ~~senior at **Indian Institute of Technology (BHU), Varanasi** in _Electronics Engg._~~
-+ Application Security Engineer at Yodlee
-+ 21 year old sample of 30k year old species of planet earth
++ n Application Security Engineer at Yodlee
 + security tool developer
 + restless soul
 + bug hunter rarely
